@@ -29,3 +29,10 @@ $trecias = $pirmas . ' ' .  $antras; // taskas yra stingu pridejimas
 
 echo '<br>';
 echo $trecias;
+
+$pirmas = 'antras';
+$antras = 'bla bla';
+
+echo '<br>'; echo '<br><hr>'; echo '<br>';
+
+echo $$pirmas;
