@@ -27,10 +27,10 @@ if ($pirmas == 0 || $antras == 0) {
     echo 'Dalyba iš 0 negalima! :(';
     } else if ($pirmas > $antras) {
         $rezultatas = $pirmas / $antras;
-        echo round($rezultatas);
+        echo round($rezultatas, 2);
     } else if ($pirmas < $antras) {
         $rezultatas = $antras / $pirmas;
-        echo round($rezultatas);
+        echo round($rezultatas, 2);
     } else if ($pirmas == $antras) {
         echo 'Lygūs skaičiai!';
     }
@@ -118,3 +118,19 @@ echo "Antras skaičius = $s2";
 echo '<br>';
 echo "Trečias skaičius = $s3";
 echo '<br>';
+
+// 11 uzdavinys
+
+$var1 = rand(1000, 9999);
+$var2 = rand(1000, 9999);
+$var3 = rand(1000, 9999);
+$var4 = rand(1000, 9999);
+$var5 = rand(1000, 9999);
+$var6 = rand(1000, 9999);
+
+echo "Skaičius1 = $var1; Skaičius2 = $var2; Skaičius3 = $var3; Skaičius4 = $var4; Skaičius5 = $var5; Skaičius6 = $var6.<br>";
+$string = strval($var1) . ' ' . strval($var2) . ' ' . strval($var3) . ' ' . strval($var4) . ' ' . strval($var5) . ' ' . strval($var6) . ' ';
+$stringParts = str_split($string, 5);
+rsort($stringParts);
+
+echo 'String of descending variables: ' . implode($stringParts) . '<br><br>';

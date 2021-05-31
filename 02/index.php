@@ -33,6 +33,8 @@ echo $trecias;
 $pirmas = 'antras';
 $antras = 'bla bla';
 
+$bla_bla = 'Valio';
+
 echo '<br>'; echo '<br><hr>'; echo '<br>';
 
-echo $$pirmas;
+echo $$$pirmas;
