@@ -56,6 +56,13 @@ echo '<br>';
 $inicialai = $vardas[0] . '.' . ' ' . $pavarde[0] . '.';
 echo "Aktoriaus inicialai yra $inicialai";
 
+//// KITAS VARIANTAS
+//$name = 'Keanu';
+//$lastname = 'Reeves';
+//$nameFirstLetter = substr($name,0,1);
+//$lastnameFirstLetter = substr($lastname, 0,1);
+//$newString = $nameFirstLetter . $lastnameFirstLetter;
+//echo $newString;
 echo '<br>'; echo '<br><hr>'; echo '<br>';
 
 ///////////////////////
@@ -151,9 +158,9 @@ echo '<br>'; echo '<br><hr>'; echo '<br>';
 echo '8 uzduotis';
 echo '<br>';
 
-$starWars = 'Star Wars: Episode '.str_repeat(' ', rand(0,5)). rand(1,9) . ' - A New Hope';
-echo $starWars;
+$starwars = 'Star Wars: Episode '.str_repeat(' ', rand(0,5)). rand(1,9) . ' - A New Hope';
 
+echo preg_replace('/\D/', '', $starwars);
 echo '<br>'; echo '<br><hr>'; echo '<br>';
 
 ///////////////////////
@@ -161,14 +168,22 @@ echo '<br>'; echo '<br><hr>'; echo '<br>';
 echo '9 uzduotis';
 echo '<br>';
 
-$stringas1 = 'Dont Be a Menace to South Central While Drinking Your Juice in the Hood';
-$stringas2 = 'Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale';
+$string2 = 'Tik nereikia gąsdinti Pietų Centro, geriant sultis pas save kvartale.';
 
-echo $stringas1;
-echo '<br>';
-echo $stringas2;
-echo '<br>';
+echo $string2;
+echo '<br>'; echo '<br>';
 
+
+$words = explode(' ', $string2);
+$counter = 0;
+
+for($i = 0; $i < count($words); $i++) {
+    if (mb_strlen($words[$i], 'UTF-8') <= 5){
+        $counter++;
+    }
+}
+
+echo "Žodžių, trumpenių arba lygių nei 5 raidės skaičius: $counter";
 
 echo '<br>'; echo '<br><hr>'; echo '<br>';
 
