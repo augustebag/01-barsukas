@@ -40,3 +40,38 @@ foreach($raides as $key => $val) {
 }
 
 echo '<br><hr>'; echo '<br>';
+
+// 5 uzdavinys
+echo '5 uzdavinys'; echo '<br>';
+// Sugeneruokite 3 masyvus pagal 3 uždavinio sąlygą. 
+// Sudėkite masyvus, sudėdami atitinkamas reikšmes. 
+// Paskaičiuokite kiek unikalių (po vieną, nesikartojančių) reikšmių ir kiek unikalių kombinacijų gavote.
+
+$masyvas1 = [];
+$masyvas2 = [];
+$masyvas3 = [];
+
+for ($i = 0; $i < 200; $i++) {
+    $masyvas1 = rand(0, 3);
+    $masyvas2 = rand(0, 3);
+    $masyvas3 = rand(0, 3);
+
+    $abc = ['A', 'B', 'C', 'D'];
+
+    $raides1[$i] = $abc[$masyvas1];
+    $raides2[$i] = $abc[$masyvas2];
+    $raides3[$i] = $abc[$masyvas3];
+
+    echo $raides1[$i] . ' ' . $raides2[$i] . ' ' . $raides3[$i]; echo '<br>';
+} // UNIKALIOS REIKSMES? 
+echo '<br><hr>'; echo '<br>';
+
+// 6 uzduotis
+echo '6 uzdavinys'; echo '<br>';
+// Sugeneruokite du masyvus, kurių reikšmės yra atsitiktiniai skaičiai nuo 100 iki 999. 
+// Masyvų ilgiai 100. Masyvų reikšmės turi būti unikalios savo masyve (t.y. neturi kartotis).
+$pirmasMasyvas = [];
+$antrasMasyvas = [];
+
+
+echo '<br><hr>'; echo '<br>';
