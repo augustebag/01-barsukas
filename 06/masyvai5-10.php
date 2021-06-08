@@ -66,3 +66,29 @@ foreach ($masyvas as &$user) {
 }
 
 _d($masyvas);
+
+echo '<br><hr>'; echo '<br>';
+
+
+// 8 uzduotis
+echo '8 užduotis'; echo '<br>';
+// Sukurkite masyvą iš 10 elementų. Masyvo reikšmes užpildykite pagal taisyklę: 
+// generuokite skaičių nuo 0 iki 5. Ir sukurkite tokio ilgio masyvą. Jeigu reikšmė 
+// yra 0 masyvo nekurkite. Antro lygio masyvo reikšmes užpildykite atsitiktiniais skaičiais nuo 0 iki 10. 
+// Ten kur masyvo nekūrėte reikšmę nuo 0 iki 10 įrašykite tiesiogiai.
+
+$masyvas = [];
+
+foreach (range(1, 10) as $key1 => $_) {
+    $sk = rand(0, 5);
+    if ($sk == 0) {
+        $masyvas[$key1] = rand(0, 10);
+    } else {
+        foreach (range(1, $sk) as $key2 => $_) {
+            $masyvas[$key1][] = rand(0, 10); 
+        }
+    }
+}
+
+_d($masyvas);
+
