@@ -31,11 +31,9 @@ echo '3 užduotis'; echo '<br>';
 // prieš pirmą ir užsidaro po paskutinio) Keitimui naudokite pirmo uždavinio funkciją ir preg_replace_callback();
 
 $string = md5(time());
-echo $string;
+echo $string; echo '<br>';
 
-function numbers($skaiciai) {
-    return "<h1>" . $skaiciai . "</h1>";
-}
+
 // NEBAIGIAU
 
 echo '<br><hr>'; echo '<br>';
@@ -44,3 +42,40 @@ echo '<br><hr>'; echo '<br>';
 echo '4 užduotis'; echo '<br>';
 // 4. Parašykite funkciją, kuri skaičiuotų, iš kiek sveikų skaičių jos argumentas dalijasi be liekanos 
 // (išskyrus vienetą ir patį save) Argumentą užrašykite taip, kad būtų galima įvesti tik sveiką skaičių;
+
+function sveikasSkaicius($sk) {
+    if ($sk == intval($sk)) {
+        $kiekis = 0;
+        for ($i = 2; $i < $sk; $i++) {
+            if ($sk % $i == 0) {
+                $kiekis++;
+            }
+        }
+        return $kiekis;
+    } elseif ($sk != intval($sk)) {
+        return;
+    }
+}
+echo sveikasSkaicius(11);
+
+echo '<br><hr>'; echo '<br>';
+
+
+echo '5 užduotis'; echo '<br>';
+// 5. Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 33 iki 77. 
+// Išrūšiuokite masyvą pagal daliklių be liekanos kiekį mažėjimo tvarka, panaudodami ketvirto uždavinio funkciją.
+
+for ($i=0; $i < 100 ; $i++) { 
+    $m[$i] = rand(33, 77);
+}
+
+foreach ($m as $key => $value) {
+    echo "$key => $value <br>";
+}
+
+foreach ($m as $key => $value) {
+    $m[$key] = sveikasSkaicius($m[$value]);
+}
+
+print_r($m);
+echo '<br><hr>'; echo '<br>';
