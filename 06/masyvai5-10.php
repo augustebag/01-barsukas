@@ -55,5 +55,14 @@ echo '7 užduotis'; echo '<br>';
 
 
 foreach ($masyvas as &$user) {
-    $user['name'] = 
+    $user['name'] = ' ';
+    $user['surname'] = ' ';
+    foreach(range(1, rand(5, 15)) as $_) {
+        $user['name'] .= range('a', 'z')[rand(0, 25)];
+    }
+    foreach(range(1, rand(5, 15)) as $_) {
+        $user['surname'] .= range('a', 'z')[rand(0, 25)];
+    }
 }
+
+_d($masyvas);
