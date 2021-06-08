@@ -111,4 +111,4 @@ usort($masyvas, function($a, $b) {
     return count($a) <=> count($b);
 });
 
-print_r($masyvas);
+_d($masyvas);
