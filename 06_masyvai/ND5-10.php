@@ -1,5 +1,7 @@
 <?php
 
+// kolegu ir destytojo sprendimai
+
 // 5 uzduotis
 echo '5 užduotis'; echo '<br>';
 // Sukurkite masyvą iš 30 elementų. Kiekvienas masyvo elementas 
@@ -92,3 +94,29 @@ foreach (range(1, 10) as $key1 => $_) {
 
 _d($masyvas);
 
+echo '<br><hr>'; echo '<br>';
+
+
+// 9 uzduotis
+echo '9 užduotis'; echo '<br>';
+// Paskaičiuokite 8 uždavinio masyvo visų reikšmių sumą ir išrūšiuokite masyvą taip, 
+// kad pirmiausiai eitų mažiausios masyvo reikšmės arba jeigu reikšmė yra masyvas, to masyvo reikšmių sumos.
+
+usort($masyvas, function($a, $b) {
+    $asum = 0;
+    if(is_array($a)) {
+        foreach($a as $value) {
+            $asum += $value;
+        }
+        $a = $asum;
+    }
+    $bsum = 0; 
+    if(is_array($b)) {
+        foreach($b as $value) {
+            $bsum += $value;
+        }
+        $b = $bsum;
+    }
+    return $a <=> $b;
+}
+);
