@@ -30,11 +30,21 @@ echo '3 užduotis'; echo '<br>';
 // įdėkite į h1 tagą. Jegu iš eilės eina keli skaitmenys, juos į tagą reikią dėti kartu (h1 atsidaro 
 // prieš pirmą ir užsidaro po paskutinio) Keitimui naudokite pirmo uždavinio funkciją ir preg_replace_callback();
 
+function h1(string|array $text3) : string {
+    if (is_array($text3)) {
+        $text3 = $text3[0];
+    }
+    return "<h1 style=\"display:inline\>$text3</h1>";
+}
+
 $string = md5(time());
 echo $string; echo '<br>';
 
+$out = preg_replace_callback('/\d+/', 'h1', $string);
 
-// NEBAIGIAU
+echo $out;
+
+
 
 echo '<br><hr>'; echo '<br>';
 
@@ -79,3 +89,5 @@ foreach ($m as $key => $value) {
 
 print_r($m);
 echo '<br><hr>'; echo '<br>';
+
+
