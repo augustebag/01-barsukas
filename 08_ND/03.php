@@ -14,13 +14,17 @@ if(isset($_GET['color'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pirmas uždavinys</title>
+    <title>Trečia užduotis</title>
 </head>
 <body style="background-color: <?=$color?>; ">
-    <h1 style="color: white"> Labas </h1>
+    <h1 style="color: white">Trečia užduotis</h1>
     <h2>
-    <a href="./index.php"> Pirmas puslapis </a>
-    <a href="./index.php?color=1"> Antras puslapis </a>
+    <a href="http://localhost/barsukas/08_ND/03.php"> Spalva </a>
     </h2>
+    <p style="color: pink"> Įrašyti spalvą </p>
+    <form action="" method="get">
+    <input type="text" name="color">
+    <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
