@@ -1,9 +1,9 @@
 <?php
 
 if((!empty($_GET)) && (empty($_POST))) {
-    $color = 'yellow';
-} elseif (!empty($_POST)) {
     $color = 'green';
+} elseif (!empty($_POST)) {
+    $color = 'yellow';
 }
 
 
@@ -22,10 +22,10 @@ if((!empty($_GET)) && (empty($_POST))) {
     <h1 style="color: red">Šešta užduotis</h1>
 
     <form action="" method="get">
-    <button type="submit" name="GET">Geltona</button>
+    <button type="submit" name="GET">Žalias GET</button>
     </form>
     <form action="" method="post">
-    <button type="submit" name="POST">Žalia</button>
+    <button type="submit" name="POST">Geltonas POST</button>
     </form>
 
 </body>
