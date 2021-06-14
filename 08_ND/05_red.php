@@ -2,7 +2,7 @@
 
 if(isset($_GET['color'])) {
     if($_GET['color'] == 'blue') {
-        header('Location: ./blue.php');
+        header('Location: ./05_blue.php');
     }
 }
 

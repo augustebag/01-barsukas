@@ -1,6 +1,6 @@
 <?php
 
-header("Location: http://localhost/barsukas/08_ND/orange.php");
+header("Location: http://localhost/barsukas/08_ND/04_orange.php");
 die;
 ?>
 
