@@ -7,6 +7,8 @@
 
 class Kibiras1 {
     protected $akmenuKiekis = 0;
+    protected static $visasAkmenuKiekis = 0;
+
     public function prideti1Akmeni() {
         $this->akmenuKiekis++;
     }
@@ -20,5 +22,9 @@ class Kibiras1 {
 
     public function kiekPririnktaAkmenu() {
         return $this->akmenuKiekis;
+    }
+
+    public static function kiekVisoPririnktaAkmenu() {
+        return self::$visasAkmenuKiekis;
     }
 }

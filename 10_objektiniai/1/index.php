@@ -7,6 +7,7 @@ $kibirasB = new Kibiras1;
 
  _d($kibiras->kiekPririnktaAkmenu(), 'A');
  _d($kibiras->kiekPririnktaAkmenu(), 'B');
+ _d($kibiras::kiekVisoPririnktaAkmenu(), 'VISO');
 
  $kibirasA->prideti1Akmeni();
  $kibirasA->prideti1Akmeni();
