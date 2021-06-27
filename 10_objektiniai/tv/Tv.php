@@ -13,6 +13,18 @@ class Tv {
     }
 
     public static function keistiPrograma($kanalas, $pavadinimas) {
-        self::$kanalai[$kanalas] = $pavadinimas;
+        if (isset(self::$kanalai[$kanalas])) {
+            self::$kanalai[$kanalas] = $pavadinimas;
+        }
+    }
+
+    public static function pridetiPrograma($kanalas, $pavadinimas) {
+        if (!isset(self::$kanalai[$kanalas])) {
+            if(is_integer($kanalas)) {
+                if ($kanalas > 0 && $kanalas <= 500) {
+                    self::$kanalai[$kanalas] = $pavadinimas;
+                }
+            }
+        }
     }
 }

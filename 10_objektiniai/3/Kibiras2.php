@@ -1,5 +1,28 @@
 <?php
 
 class Kibiras2 {
-    private akmenuKiekisVisuoseKibiruose
+    private static $akmenuKiekisVisuoseKibiruose;
+    protected $akmenuKiekis = 0;
+ 
+    public function __constructor() {
+        self::$akmenuKiekisVisuoseKibiruose += $this->akmenuKiekis;
+    }
+
+    public function pridetiAkmeni() {
+        $this->akmenuKiekis++;
+        self::$akmenuKiekisVisuoseKibiruose += $this->akmenuKiekis;
+    }   
+
+    public function pridetiDaugAkmenu($kiekis) {
+        $this->akmenuKiekis += $kiekis;
+        self::$akmenuKiekisVisuoseKibiruose += $this->akmenuKiekis;
+    } 
+    
+    public function kiekPririnktaAkm() {
+        echo $this->akmenuKiekis;
+    }
+
+    static function getAkmenuKiekisVisuoseKibiruose() {
+        echo self::$akmenuKiekisVisuoseKibiruose;
+    }
 }
