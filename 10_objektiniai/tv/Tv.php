@@ -2,7 +2,7 @@
 
 class Tv {
     private $istrizaine;
-    protected static $kanalai = [1 => 'TV3', 2 => 'LRT', 3 => 'POLONIA'];
+    protected static $kanalai = [1 => 'TV3', 2 => 'LRT', 3 => 'POLONIA']; 
 
     public function _construct($ist) {
         $this -> istrizaine = $ist;
