@@ -15,13 +15,13 @@ class Bebras {
         echo "<h2>Aš esu brūkšnys</h2>";
     }
     
-    public function __construct($color = 'Black') {
+    public function __construct($color = 'Black') { // negali buti keliu konstruktoriu
         $this->color = $color;
         $this->age = rand(1,10);
         echo "<h2>Construct !</h2>";
     }
 
-    public function __destruct() {
+    public function __destruct() {// paleidziame, kai paskutine nuoroda yra sunaikinama
         echo "<h2>Destruct !</h2>";
     }
 
@@ -58,7 +58,7 @@ class Bebras {
         // $this->$prop = $value;
     }
 
-    public function __get($prop) {
+    public function __get($prop) { // magic metodas, kuris pats pasileidzia, kai nutinka kazkoks ivykis
     //    if (!in_array($prop, ['age', 'color'])) {
     //        return null;
     //    }

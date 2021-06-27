@@ -3,7 +3,7 @@
 // Programuotojas Zigmas
 
 
-class UpinisBebras extends Bebras {
+class UpinisBebras extends Bebras { // extends Bebras - yra perkeliamas Zitos kodas
 
     public $river = 'Neris';
 
