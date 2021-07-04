@@ -8,7 +8,7 @@ class Kibiras2 {
         self::$akmenuKiekisVisuoseKibiruose += $this->akmenuKiekis;
     }
 
-    public function pridetiAkmeni() {
+    public function prideti1Akmeni() {
         $this->akmenuKiekis++;
         self::$akmenuKiekisVisuoseKibiruose += $this->akmenuKiekis;
     }   
