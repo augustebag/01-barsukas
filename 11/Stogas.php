@@ -1,7 +1,7 @@
 <?php
 
 
-abstract class Stogas implements Planas {
+abstract class Stogas implements Planas, PlanasStogui {
 
     public function doStogas() {
         $k1 = $this->getKampas1();
@@ -10,5 +10,8 @@ abstract class Stogas implements Planas {
         $k4 = $this->getKampas4();
 
         return $k1 + $k2 + $k3 + $k4;
+    }
+
+    public function lietausLatakas() {
     }
 }

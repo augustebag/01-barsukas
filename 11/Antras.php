@@ -1,6 +1,6 @@
 <?php
 
-abstract class Antras extends Stogas {
+abstract class Antras extends Stogas implements Planas {
 
     public function doAntras() {
         $k1 = $this->getKampas1();
