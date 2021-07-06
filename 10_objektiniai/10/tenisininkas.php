@@ -22,7 +22,7 @@ class Tenisininkas {
     }
 
     public static function zaidimoPradzia() {
-        if (self::$zaidejas1 === null || slef::$zaidejas2 === null) {
+        if (self::$zaidejas1 === null || self::$zaidejas2 === null) {
             echo 'Negali pats su savimi zaisti';
             die;
         }
@@ -48,11 +48,11 @@ class Tenisininkas {
     }
 
     public function perduotiKamuoliuka() {
-        if (self::$zaidejas1 === null || slef::$zaidejas2 === null) {
+        if (self::$zaidejas1 === null || self::$zaidejas2 === null) {
             echo 'Negali pats su savimi zaisti';
             die;
         }
-        if (!$this->$kamuoliukas && self::$start) {
+        if (!$this->kamuoliukas && self::$start) {
             echo 'Perduoti negali, nes neturi kamuoliuko';
         }
 
