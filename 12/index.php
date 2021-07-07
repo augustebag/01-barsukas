@@ -23,7 +23,7 @@ require __DIR__ . '/belgai/Animal.php';
 require __DIR__ . '/Animal.php';
 
 
-echo AnimalL::$hello;  echo '<br>';
+echo AnimalL::sayUUID();  echo '<br>';
 new AnimalL;
 echo AnimalA::$go; echo '<br>';
 new AnimalA;
