@@ -1,0 +1,18 @@
+{
+    "name": "abagd/12",
+    "description": "bla bla",
+    "authors": [
+        {
+            "name": "Augustė Bagdzevičiūtė",
+            "email": "79446863+augustebag@users.noreply.github.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Zoo\\": "",
+            "Australia\\": "australai",
+            "Belgium\\": "belgai"
+        }
+    },
+    "require": {}
+}
