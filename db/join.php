@@ -55,5 +55,31 @@ ON clients.id = phones.client_id
 $stmt = $pdo->query($sql); // DB steitmentas
 while ($row = $stmt->fetch()) // duok man viena eilute
 {
-    echo $row['cid'].' '.$row['name'].' '.$row['number'].'<br>';
+    echo 'Client id: '.$row['cid'].' '.$row['name'].' Phone id: '.$row['pid'].' '.$row['number'].'<br>';
+}
+
+/* RIGHT JOIN
+
+SELECT column)name(s)
+FROM table1
+RIGHT JOIN table2
+ON  table1.column_name = table2.column_name;
+cid - kliento id
+pid - phone id
+*/
+echo '<br>';
+
+$sql = "SELECT `name`, `number`, clients.id as cid, phones.id as pid 
+FROM clients
+RIGHT JOIN phones
+ON clients.id = phones.client_id
+-- RIGHT JOIN phones
+-- ON clients.id = phones.client_id  PAPILDOMOS LENTELES PRIJUNGIMAS
+ORDER BY clients.name
+";
+
+$stmt = $pdo->query($sql); // DB steitmentas
+while ($row = $stmt->fetch()) // duok man viena eilute
+{
+    echo 'Client id: '.$row['cid'].' '.$row['name'].' Phone id: '.$row['pid'].' '.$row['number'].'<br>';
 }
